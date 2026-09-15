@@ -27,3 +27,4 @@ static long vtouch_exit(void *__user reserved)
 
 KPM_INIT(vtouch_init);
 KPM_EXIT(vtouch_exit);
+
