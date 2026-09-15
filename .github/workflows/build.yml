@@ -48,14 +48,20 @@ jobs:
           cd kpms
 
           cd demo-hello
+          export TARGET_COMPILE=`pwd`/../../arm-gnu-toolchain-12.2.rel1-x86_64-aarch64-none-elf/bin/aarch64-none-elf-
+          make clean
           make
           mv hello.kpm demo-hello.kpm
 
           cd ../demo-inlinehook
+          export TARGET_COMPILE=`pwd`/../../arm-gnu-toolchain-12.2.rel1-x86_64-aarch64-none-elf/bin/aarch64-none-elf-
+          make clean
           make
           mv inlinehook.kpm demo-inlinehook.kpm
 
           cd ../demo-syscallhook
+          export TARGET_COMPILE=`pwd`/../../arm-gnu-toolchain-12.2.rel1-x86_64-aarch64-none-elf/bin/aarch64-none-elf-
+          make clean
           make
           mv syscallhook.kpm demo-syscallhook.kpm
 
